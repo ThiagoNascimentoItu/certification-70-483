@@ -10,7 +10,13 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
+            int idade = 30;
+            Console.WriteLine(idade);
+            int copiaIdade = idade;
 
+            Console.WriteLine($"idade: {idade}");
+            Console.WriteLine($"Copia idade: {copiaIdade}");
+            int? idade2 = null;
         }
     }
 }
