@@ -12,6 +12,8 @@ namespace certificacao_csharp_roteiro
         {
             string a = "bom dia";
             string b = "b";
+
+            b.Contains(a);      
         }
     }
 }

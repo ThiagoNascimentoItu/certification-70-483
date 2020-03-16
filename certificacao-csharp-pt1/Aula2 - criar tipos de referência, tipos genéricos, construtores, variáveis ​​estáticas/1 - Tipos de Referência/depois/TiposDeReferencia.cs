@@ -15,6 +15,7 @@ namespace certificacao_csharp_roteiro
             Console.WriteLine("idade:");
 
             var cliente1 = new Cliente("Jose da silva", 42);
+            var cliente2 = cliente1;
 
         }
     }

@@ -12,6 +12,18 @@ namespace certificacao_csharp_roteiro
         {
             int pontuacao = 10;
             Console.WriteLine($"pontuacao: {pontuacao}");
+            Console.WriteLine("Objeto:");
+            object meuObjeto;
+            meuObjeto = pontuacao;
+            Console.WriteLine($"Meu Objeto: {meuObjeto }");
+
+
+            Console.WriteLine($"Meu Objeto referencia");
+
+            meuObjeto = new Jogador();
+            Jogador classRef;
+            classRef =  (Jogador)meuObjeto;
+            Console.WriteLine($"Meu Objeto: {meuObjeto }");
         }
     }
 

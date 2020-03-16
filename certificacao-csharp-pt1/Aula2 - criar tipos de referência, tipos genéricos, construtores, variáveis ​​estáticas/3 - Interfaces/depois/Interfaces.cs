@@ -10,10 +10,24 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
+            IEletrodomestico eletro1 = new Televisao();
+            eletro1.Ligar();
+
+            eletro1 = new Abajur();
         }
     }
 
-    class Televisao
+    interface IEletrodomestico
+    {
+        void Ligar();
+        void Desligar();
+    }
+
+    interface IIluminacao
+    {
+        double PotenciaDaLampada { get; set; }
+    }
+    class Televisao : IEletrodomestico
     {
         public void Desligar()
         {
@@ -24,7 +38,7 @@ namespace certificacao_csharp_roteiro
         }
     }
 
-    class Abajur
+    class Abajur : IIluminacao, IEletrodomestico
     {
         public double PotenciaDaLampada { get; set; }
 
@@ -37,7 +51,7 @@ namespace certificacao_csharp_roteiro
         }
     }
 
-    class Lanterna
+    class Lanterna : IIluminacao, IEletrodomestico
     {
         public double PotenciaDaLampada { get; set; }
 
@@ -50,7 +64,7 @@ namespace certificacao_csharp_roteiro
         }
     }
 
-    class Radio
+    class Radio : IEletrodomestico
     {
         public void Desligar()
         {
